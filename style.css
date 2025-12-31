@@ -1,0 +1,8 @@
+#analysis{
+background:#fff;
+padding:15px;
+border-radius:8px;
+}
+
+.good{color:green;font-weight:bold}
+.bad{color:red;font-weight:bold}

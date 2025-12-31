@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Pro Trading Journal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>📘 Advanced Pro Trading Journal</h1>
+
+<form id="tradeForm">
+<h3>Trade Details</h3>
+
+<input type="date" id="date" required>
+
+<select id="instrument">
+<option>NIFTY</option>
+<option>BANKNIFTY</option>
+<option>FINNIFTY</option>
+</select>
+
+<select id="type">
+<option>CALL</option>
+<option>PUT</option>
+</select>
+
+<input type="text" id="strategy" placeholder="Strategy Name" required>
+<input type="number" id="entry" placeholder="Entry Price" required>
+<input type="number" id="exit" placeholder="Exit Price" required>
+<input type="number" id="qty" placeholder="Quantity" required>
+
+<hr>
+
+<h3>📌 Trade Basis (min 5)</h3>
+<label><input type="checkbox" class="basis" value="Trend"> Trend</label>
+<label><input type="checkbox" class="basis" value="VWAP"> VWAP</label>
+<label><input type="checkbox" class="basis" value="EMA"> EMA 20 > 50</label>
+<label><input type="checkbox" class="basis" value="Price Action"> Price Action</label>
+<label><input type="checkbox" class="basis" value="Volume"> Volume</label>
+<label><input type="checkbox" class="basis" value="RR"> RR ≥ 1:2</label>
+
+<hr>
+
+<h3>❌ Mistakes</h3>
+<label><input type="checkbox" class="mistake" value="No SL"> No SL</label>
+<label><input type="checkbox" class="mistake" value="Overtrade"> Overtrade</label>
+<label><input type="checkbox" class="mistake" value="Emotional"> Emotional</label>
+<label><input type="checkbox" class="mistake" value="Revenge"> Revenge</label>
+
+<select id="emotion">
+<option value="">Emotion Before Trade</option>
+<option>Calm</option>
+<option>Fear</option>
+<option>Greed</option>
+<option>Revenge</option>
+</select>
+
+<textarea id="notes" placeholder="Psychology / Notes"></textarea>
+
+<button>Add Trade</button>
+</form>
+
+<h2>📊 Trade History</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th><th>Instrument</th><th>Type</th>
+<th>Strategy</th><th>P&L</th><th>Status</th>
+</tr>
+</thead>
+<tbody id="table"></tbody>
+</table>
+
+<h2>🧠 FULL ANALYSIS</h2>
+<div id="analysis"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
